@@ -16,6 +16,21 @@
       "filename" : "sun_small@3x.png"
     },
     {
+      "idiom" : "iphone",
+      "scale" : "1x",
+      "widthClass" : "compact"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "widthClass" : "compact"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "widthClass" : "compact"
+    },
+    {
       "idiom" : "ipad",
       "scale" : "1x",
       "filename" : "sun_big.png"
@@ -24,6 +39,16 @@
       "idiom" : "ipad",
       "scale" : "2x",
       "filename" : "sun_big@2x.png"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "1x",
+      "widthClass" : "compact"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "2x",
+      "widthClass" : "compact"
     }
   ],
   "info" : {

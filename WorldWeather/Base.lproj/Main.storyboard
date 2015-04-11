@@ -192,23 +192,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ysq-o1-8AH" userLabel="TextContainer">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ysq-o1-8AH" userLabel="TextContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="omh-zH-HAS" userLabel="CityLabel">
-                                        <rect key="frame" x="0.0" y="10" width="600" height="177"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="omh-zH-HAS" userLabel="CityLabel">
+                                        <rect key="frame" x="0.0" y="128" width="600" height="177"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="30" width="300" height="177"/>
+                                        </variation>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bt7-OR-lfe" userLabel="TempLabel">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" ambiguous="YES" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bt7-OR-lfe" userLabel="TempLabel">
                                         <rect key="frame" x="0.0" y="35" width="600" height="295"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="250"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="105" width="300" height="295"/>
+                                        </variation>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         </variation>
@@ -226,15 +232,39 @@
                                     <constraint firstAttribute="centerX" secondItem="bt7-OR-lfe" secondAttribute="centerX" id="sAy-X4-8Fn"/>
                                     <constraint firstItem="omh-zH-HAS" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bt7-OR-lfe" secondAttribute="top" constant="50" id="teS-vo-IjP"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EPz-ac-c4l"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                    <mask key="constraints">
+                                        <include reference="EPz-ac-c4l"/>
+                                    </mask>
+                                </variation>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5c-tx-LEj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="fyR-Kp-w02"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="988-rV-JtB" kind="embed" id="aHM-cx-wnA"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ysq-o1-8AH" firstAttribute="height" secondItem="yY8-cW-ib9" secondAttribute="height" id="N6Z-wD-ry9"/>
                             <constraint firstItem="Ysq-o1-8AH" firstAttribute="width" secondItem="yY8-cW-ib9" secondAttribute="width" id="TLp-g5-dL9"/>
-                            <constraint firstAttribute="centerX" secondItem="Ysq-o1-8AH" secondAttribute="centerX" id="eXO-x4-4FV"/>
                             <constraint firstAttribute="centerY" secondItem="Ysq-o1-8AH" secondAttribute="centerY" id="zqA-ka-krD"/>
                         </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="e5c-tx-LEj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="cityNameLabel" destination="omh-zH-HAS" id="WDa-5q-ick"/>
@@ -250,7 +280,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="dailyWeatherCollectionView" id="988-rV-JtB" userLabel="Daily Weather Collection View" customClass="DailyWeatherCollectionViewController" customModule="WorldWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yMs-tn-Vxl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.22101389630000001" green="0.50662462070000003" blue="0.73999521680000002" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="dVr-V4-e44">
